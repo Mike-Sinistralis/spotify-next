@@ -17,7 +17,7 @@ module.exports = {
       'import/resolver': {
         node: { extensions: ['.mjs'] },
         alias: {
-          map: getAliases([__dirname, '..']),
+          map: getAliases([__dirname]),
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
       },
@@ -27,9 +27,7 @@ module.exports = {
       ecmaFeatures: {
         jsx: true,
       },
-      project: './tsconfig.json',
-      tsconfigRootDir: __dirname,
-      sourceType: 'module',
+      project: null,
     },
     env: {
       node: true,
@@ -64,6 +62,7 @@ module.exports = {
           tsx: 'never',
         },
       ],
+      'linebreak-style': 'off',
       'no-use-before-define': 'off', // See: https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-use-before-define.md#how-to-use
       '@typescript-eslint/no-use-before-define': 'off',
       'no-shadow': 'off', // See: https://stackoverflow.com/questions/63961803/eslint-says-all-enums-in-typescript-app-are-already-declared-in-the-upper-scope
@@ -77,6 +76,7 @@ module.exports = {
       'react/button-has-type': 0, // We can enforce this via proptypes while enabling dynamic types
       'react/jsx-uses-react': 0,
       'react/react-in-jsx-scope': 0,
+      "react/no-unknown-property": ['error', { ignore: ['css'] }],
 
       'import/no-cycle': 0, // this is an expensive lint rule, so it's disabled by default. We might want to make a more strict lint config for the future
       'react/forbid-prop-types': 0, // typescript, no longer useful
@@ -86,7 +86,9 @@ module.exports = {
         files: ['**/*.ts', '**/*.tsx'],
         parser: '@typescript-eslint/parser',
         parserOptions: {
-          project: [path.resolve(__dirname, '../tsconfig.json')],
+          project: [path.resolve(__dirname, './tsconfig.json')],
+          tsconfigRootDir: __dirname,
+          sourceType: 'module',
         },
         extends: [
           'plugin:@typescript-eslint/recommended',
