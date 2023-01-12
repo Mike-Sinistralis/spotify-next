@@ -1,0 +1,10 @@
+// The "paths" configuration needs to live in jsconfig.json rather than tsconfig.json
+// otherwise VSCode gets real confused by absolute paths.
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "~Pages/*": ["./pages/*"],
+    }
+  }
+}
