@@ -7,11 +7,13 @@ module.exports = {
       'airbnb',
       'plugin:@next/next/recommended',
       'plugin:react-hooks/recommended',
+      'plugin:@tanstack/eslint-plugin-query/recommended',
     ],
     ignorePatterns: ['**/node_modules/*'],
     plugins: [
       '@typescript-eslint',
       'file-progress',
+      '@tanstack/query',
     ],
     settings: {
       'import/resolver': {
@@ -77,7 +79,6 @@ module.exports = {
       'react/jsx-uses-react': 0,
       'react/react-in-jsx-scope': 0,
       "react/no-unknown-property": ['error', { ignore: ['css'] }],
-
       'import/no-cycle': 0, // this is an expensive lint rule, so it's disabled by default. We might want to make a more strict lint config for the future
       'react/forbid-prop-types': 0, // typescript, no longer useful
     },

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
 import PlayerLayout from '~Components/PlayerLayout';
+import GlobalStyle from '~Components/GlobalStyle';
 
 import 'reset-css';
 
@@ -41,6 +42,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <GlobalStyle />
       <ChakraProvider theme={theme}>
         <PlayerLayout>
           <Component {...pageProps} />

@@ -1,5 +1,7 @@
 import { Box } from '@chakra-ui/layout';
 import { css } from '@emotion/react';
+import Player from '~Components/Player';
+import SideBar from '~Components/Sidebar';
 
 const navBarSize = '250px';
 const playerSize = '100px';
@@ -33,13 +35,13 @@ function PlayerLayout({ children }): JSX.Element {
   return (
     <Box css={styles.container}>
       <Box css={styles.leftNav}>
-        sidebar
+        <SideBar />
       </Box>
       <Box css={styles.content}>
         {children}
       </Box>
       <Box css={styles.player}>
-        player
+        <Player />
       </Box>
     </Box>
   );
