@@ -6,6 +6,7 @@
     "paths": {
       "~Pages/*": ["./pages/*"],
       "~Components/*": ["./components/*"],
+      "~Lib/*": ["./lib/*"],
     }
   }
 }

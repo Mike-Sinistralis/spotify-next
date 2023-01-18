@@ -1,0 +1,8 @@
+Course: https://frontendmasters.com/courses/fullstack-app-next
+DB: https://supabase.com/
+Chakra: https://chakra-ui.com/
+
+
+ToDo:
+ - Read up on Prisma, it is doing a lot and I need to get more familiar with it.
+ - Get a better handle on the shadow db
