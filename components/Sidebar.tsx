@@ -75,7 +75,7 @@ function SideBar(): JSX.Element {
           </List>
         </Box>
         <Center>
-          <Divider bg="gray.800" marginY="15px" width="50%" />
+          <Divider bg="gray.800" marginY="15px" width="70%" />
         </Center>
         <Box flex="0 1 auto">
           <List spacing={2}>
@@ -92,7 +92,7 @@ function SideBar(): JSX.Element {
           </List>
         </Box>
         <Center>
-          <Divider bg="gray.800" marginY="15px" width="50%" />
+          <Divider bg="gray.800" marginY="15px" width="70%" />
         </Center>
         <Box flex="1 1 auto" overflowY="auto" paddingY="20px">
           <List spacing={2}>
